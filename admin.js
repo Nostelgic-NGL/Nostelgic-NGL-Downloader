@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalUsersCount = document.getElementById('totalUsersCount');
     const totalMessagesCount = document.getElementById('totalMessagesCount');
 
-    // Simple session check for admin
     const isAdminLoggedIn = localStorage.getItem('ngl_admin_auth') === 'true';
     if (isAdminLoggedIn) {
         adminLoginSection.classList.add('hidden');
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (adminLoginBtn) {
         adminLoginBtn.addEventListener('click', () => {
             const pass = adminPasswordInput.value.trim();
-            // Yahan apna custom admin password set kar le (jaise 'jitu99')
             if (pass === "jitu99") {
                 localStorage.setItem('ngl_admin_auth', 'true');
                 adminLoginSection.classList.add('hidden');
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const dbRef = ref(rtdb);
             
-            // Fetch Users Count
             const usersSnapshot = await get(child(dbRef, 'users'));
             if (usersSnapshot.exists()) {
                 const usersData = usersSnapshot.val();
@@ -54,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalUsersCount.innerText = "0";
             }
 
-            // Fetch Messages Count
             const messagesSnapshot = await get(child(dbRef, 'messages'));
             if (messagesSnapshot.exists()) {
                 const messagesData = messagesSnapshot.val();
