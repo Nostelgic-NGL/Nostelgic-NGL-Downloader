@@ -6,122 +6,11 @@
     <title>Download Nostelgic NGL - Anonymous Q&A</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: #030712;
-            color: #f8fafc;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 20px;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 420px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin: auto 0;
-            gap: 24px;
-        }
-
-        .app-logo {
-            width: 110px;
-            height: 110px;
-            object-fit: contain;
-            border-radius: 28px;
-            box-shadow: 0 15px 35px rgba(219, 39, 119, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .app-title {
-            font-size: 32px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #8b5cf6, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
-        }
-
-        .app-subtitle {
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.5;
-            padding: 0 10px;
-        }
-
-        .features-box {
-            background: #131b2e;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            width: 100%;
-            border-radius: 20px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            text-align: left;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 13px;
-            color: #cbd5e1;
-            font-weight: 500;
-        }
-
-        .feature-item i {
-            color: #ec4899;
-            font-size: 16px;
-        }
-
-        .download-btn {
-            background: linear-gradient(135deg, #db2777 0%, #7c3aed 100%);
-            color: #ffffff;
-            font-weight: 700;
-            width: 100%;
-            padding: 16px;
-            border-radius: 35px;
-            border: none;
-            box-shadow: 0 10px 25px rgba(219, 39, 119, 0.4);
-            cursor: pointer;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: transform 0.1s ease;
-        }
-
-        .download-btn:active {
-            transform: scale(0.97);
-        }
-
-        .footer-info {
-            font-size: 11px;
-            color: #64748b;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="download-container">
         <!-- App Logo -->
         <img src="Nostelgic-NGL.png" alt="Nostelgic NGL Logo" class="app-logo">
         
@@ -137,8 +26,8 @@
             <div class="feature-item"><i class="fas fa-image"></i> Instant Instagram Story Share Card</div>
         </div>
 
-        <!-- Download APK Button (Apni APK file ka link yahan daal dena) -->
-        <a href="app-debug.apk" class="download-btn" download>
+        <!-- Download APK Button -->
+        <a href="app-debug.apk" class="download-btn" id="downloadBtn" download>
             <i class="fas fa-download"></i> Download APK (Android)
         </a>
 
@@ -147,5 +36,6 @@
         </div>
     </div>
 
+    <script src="index.js"></script>
 </body>
 </html>
